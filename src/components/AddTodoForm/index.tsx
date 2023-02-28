@@ -36,6 +36,23 @@ export const AddTodoForm: React.FC<IAddTodoFormProps> = ({ onFormSubmit }) => {
             <Input placeholder="What needs to be done?" />
           </Form.Item>
         </Col>
+        <Col xs={24} sm={24} md={17} lg={19} xl={20}>
+          <Form.Item
+            name={'email'}
+            rules={[
+              {
+                type: 'email',
+                message: 'The input is not valid E-mail!',
+              },
+              {
+                required: true,
+                message: 'Please input your E-mail!',
+              },
+            ]}
+          >
+            <Input placeholder="Input email" />
+          </Form.Item>
+        </Col>
         <Col xs={24} sm={24} md={7} lg={5} xl={4}>
           <Button type="primary" htmlType="submit" block>
             <PlusCircleFilled />
